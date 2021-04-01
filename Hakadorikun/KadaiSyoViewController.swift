@@ -36,7 +36,8 @@ class KadaiSyoViewController: UIViewController, UITextViewDelegate {
         URLmemo.layer.masksToBounds = true
         
         
-
+        //konnnichiha
+        
         // Do any additional setup after loading the view.
     }
     
