@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		683A12D12615F8D800514EC9 /* KadaiSyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683A12D02615F8D800514EC9 /* KadaiSyoViewController.swift */; };
 		68F77EA22614C07300A247D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA12614C07300A247D2 /* AppDelegate.swift */; };
 		68F77EA42614C07300A247D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA32614C07300A247D2 /* SceneDelegate.swift */; };
 		68F77EA62614C07300A247D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA52614C07300A247D2 /* ViewController.swift */; };
 		68F77EA92614C07300A247D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EA72614C07300A247D2 /* Main.storyboard */; };
 		68F77EAB2614C07700A247D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EAA2614C07700A247D2 /* Assets.xcassets */; };
 		68F77EAE2614C07700A247D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EAC2614C07700A247D2 /* LaunchScreen.storyboard */; };
+		68F77EB82614C3A500A247D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EB72614C3A500A247D2 /* HomeViewController.swift */; };
+		68F77EBB2614C65500A247D2 /* hakadori1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EBA2614C65400A247D2 /* hakadori1.png */; };
+		68F77ECB2614DD1A00A247D2 /* KadaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77ECA2614DD1A00A247D2 /* KadaiViewController.swift */; };
+		68F77ED4261563D100A247D2 /* ellipse1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F77ED3261563D100A247D2 /* ellipse1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		683A12D02615F8D800514EC9 /* KadaiSyoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadaiSyoViewController.swift; sourceTree = "<group>"; };
 		68F77E9E2614C07300A247D2 /* Hakadorikun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hakadorikun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F77EA12614C07300A247D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F77EA32614C07300A247D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		68F77EAA2614C07700A247D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68F77EAD2614C07700A247D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68F77EAF2614C07700A247D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68F77EB72614C3A500A247D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		68F77EBA2614C65400A247D2 /* hakadori1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hakadori1.png; sourceTree = "<group>"; };
+		68F77ECA2614DD1A00A247D2 /* KadaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadaiViewController.swift; sourceTree = "<group>"; };
+		68F77ED3261563D100A247D2 /* ellipse1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipse1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,15 @@
 		68F77EA02614C07300A247D2 /* Hakadorikun */ = {
 			isa = PBXGroup;
 			children = (
+				68F77EBA2614C65400A247D2 /* hakadori1.png */,
+				68F77ED3261563D100A247D2 /* ellipse1.png */,
 				68F77EA12614C07300A247D2 /* AppDelegate.swift */,
 				68F77EA32614C07300A247D2 /* SceneDelegate.swift */,
 				68F77EA52614C07300A247D2 /* ViewController.swift */,
+				68F77EB72614C3A500A247D2 /* HomeViewController.swift */,
 				68F77EA72614C07300A247D2 /* Main.storyboard */,
+				68F77ECA2614DD1A00A247D2 /* KadaiViewController.swift */,
+				683A12D02615F8D800514EC9 /* KadaiSyoViewController.swift */,
 				68F77EAA2614C07700A247D2 /* Assets.xcassets */,
 				68F77EAC2614C07700A247D2 /* LaunchScreen.storyboard */,
 				68F77EAF2614C07700A247D2 /* Info.plist */,
@@ -124,6 +139,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F77ED4261563D100A247D2 /* ellipse1.png in Resources */,
+				68F77EBB2614C65500A247D2 /* hakadori1.png in Resources */,
 				68F77EAE2614C07700A247D2 /* LaunchScreen.storyboard in Resources */,
 				68F77EAB2614C07700A247D2 /* Assets.xcassets in Resources */,
 				68F77EA92614C07300A247D2 /* Main.storyboard in Resources */,
@@ -138,8 +155,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F77EA62614C07300A247D2 /* ViewController.swift in Sources */,
+				68F77ECB2614DD1A00A247D2 /* KadaiViewController.swift in Sources */,
 				68F77EA22614C07300A247D2 /* AppDelegate.swift in Sources */,
 				68F77EA42614C07300A247D2 /* SceneDelegate.swift in Sources */,
+				68F77EB82614C3A500A247D2 /* HomeViewController.swift in Sources */,
+				683A12D12615F8D800514EC9 /* KadaiSyoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-projects.Hakadorikun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-projects.Hakadorikun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
