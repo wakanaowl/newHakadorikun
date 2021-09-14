@@ -13,6 +13,8 @@ class object: NSObject {
     static let instance = object()
     var Localdata = ""
     var Localdetail = ""
+    
+    
 }
 
 

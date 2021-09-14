@@ -17,9 +17,9 @@ class HomeViewController: UIViewController {
             super.viewDidLoad()
         
 
-            if let fileURL = Realm.Configuration.defaultConfiguration.fileURL {
-                try! FileManager.default.removeItem(at: fileURL)
-           }
+//            if let fileURL = Realm.Configuration.defaultConfiguration.fileURL {
+//                try! FileManager.default.removeItem(at: fileURL)
+//           }
         
 
             navigationController?.navigationBar.setBackgroundImage(UIImage(named: "hakadori1.png"), for: .default)
