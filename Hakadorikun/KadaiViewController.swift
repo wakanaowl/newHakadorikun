@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class KadaiViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
 
     @IBOutlet weak var KadaiTable: UITableView!
+    
+ //   let realm = try! Realm()
+
     
     
     override func viewDidLoad() {
@@ -17,6 +22,9 @@ class KadaiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         KadaiTable.delegate = self
         KadaiTable.dataSource = self
+        
+//        let kadaiData = realm.objects(Kadai.self)
+//        print("全てのデータ\(kadaiData)")
         
         // Do any additional setup after loading the view.
     }
