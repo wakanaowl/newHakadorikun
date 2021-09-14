@@ -3,14 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0826CF3EF51A6F141B16C423 /* Pods_Hakadorikun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B1CC9D3703F29CD401BE3A /* Pods_Hakadorikun.framework */; };
+		680C34F6266B6E81002B6720 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680C34F5266B6E81002B6720 /* LocalViewController.swift */; };
+		6836047E26202EAE00B156B8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6836047D26202EAE00B156B8 /* CalendarViewController.swift */; };
+		683604822621739600B156B8 /* DateSyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683604812621739600B156B8 /* DateSyoViewController.swift */; };
+		68360486262205C800B156B8 /* SampleDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68360485262205C800B156B8 /* SampleDataViewController.swift */; };
 		683A12D12615F8D800514EC9 /* KadaiSyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683A12D02615F8D800514EC9 /* KadaiSyoViewController.swift */; };
+		683B9EE126431D2B004FFE6A /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B9EE026431D2B004FFE6A /* PlaceHolderTextView.swift */; };
+		6873A4BE26623FB2001266BA /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873A4BD26623FA0001266BA /* EventViewController.swift */; };
+		6873A4D72666AC11001266BA /* EventEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873A4D62666AC10001266BA /* EventEditTableViewController.swift */; };
+		6873A4DB2666D3AE001266BA /* Userdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873A4DA2666D3AE001266BA /* Userdata.swift */; };
 		68F77EA22614C07300A247D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA12614C07300A247D2 /* AppDelegate.swift */; };
 		68F77EA42614C07300A247D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA32614C07300A247D2 /* SceneDelegate.swift */; };
-		68F77EA62614C07300A247D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA52614C07300A247D2 /* ViewController.swift */; };
 		68F77EA92614C07300A247D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EA72614C07300A247D2 /* Main.storyboard */; };
 		68F77EAB2614C07700A247D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EAA2614C07700A247D2 /* Assets.xcassets */; };
 		68F77EAE2614C07700A247D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EAC2614C07700A247D2 /* LaunchScreen.storyboard */; };
@@ -18,14 +26,23 @@
 		68F77EBB2614C65500A247D2 /* hakadori1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EBA2614C65400A247D2 /* hakadori1.png */; };
 		68F77ECB2614DD1A00A247D2 /* KadaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77ECA2614DD1A00A247D2 /* KadaiViewController.swift */; };
 		68F77ED4261563D100A247D2 /* ellipse1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F77ED3261563D100A247D2 /* ellipse1.png */; };
+		853CBFDF26F0D2C500C724C2 /* Datepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CBFDE26F0D2C500C724C2 /* Datepicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47D8C32CAC19E6042F798D19 /* Pods-Hakadorikun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hakadorikun.debug.xcconfig"; path = "Target Support Files/Pods-Hakadorikun/Pods-Hakadorikun.debug.xcconfig"; sourceTree = "<group>"; };
+		680C34F5266B6E81002B6720 /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
+		6836047D26202EAE00B156B8 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		683604812621739600B156B8 /* DateSyoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSyoViewController.swift; sourceTree = "<group>"; };
+		68360485262205C800B156B8 /* SampleDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataViewController.swift; sourceTree = "<group>"; };
 		683A12D02615F8D800514EC9 /* KadaiSyoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadaiSyoViewController.swift; sourceTree = "<group>"; };
+		683B9EE026431D2B004FFE6A /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		6873A4BD26623FA0001266BA /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		6873A4D62666AC10001266BA /* EventEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		6873A4DA2666D3AE001266BA /* Userdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdata.swift; sourceTree = "<group>"; };
 		68F77E9E2614C07300A247D2 /* Hakadorikun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hakadorikun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F77EA12614C07300A247D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F77EA32614C07300A247D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68F77EA52614C07300A247D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		68F77EA82614C07300A247D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68F77EAA2614C07700A247D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68F77EAD2614C07700A247D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +51,10 @@
 		68F77EBA2614C65400A247D2 /* hakadori1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hakadori1.png; sourceTree = "<group>"; };
 		68F77ECA2614DD1A00A247D2 /* KadaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadaiViewController.swift; sourceTree = "<group>"; };
 		68F77ED3261563D100A247D2 /* ellipse1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipse1.png; sourceTree = "<group>"; };
+		6B7F7DCC7651678E567D84D8 /* Pods-Hakadorikun.sample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hakadorikun.sample.xcconfig"; path = "Target Support Files/Pods-Hakadorikun/Pods-Hakadorikun.sample.xcconfig"; sourceTree = "<group>"; };
+		82843EE5032033E41B3A8709 /* Pods-Hakadorikun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hakadorikun.release.xcconfig"; path = "Target Support Files/Pods-Hakadorikun/Pods-Hakadorikun.release.xcconfig"; sourceTree = "<group>"; };
+		853CBFDE26F0D2C500C724C2 /* Datepicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datepicker.swift; sourceTree = "<group>"; };
+		D4B1CC9D3703F29CD401BE3A /* Pods_Hakadorikun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hakadorikun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +62,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0826CF3EF51A6F141B16C423 /* Pods_Hakadorikun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1673A7D3664F2FBF0A7313CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4B1CC9D3703F29CD401BE3A /* Pods_Hakadorikun.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		600ADFB5324F0D03ED6C94D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47D8C32CAC19E6042F798D19 /* Pods-Hakadorikun.debug.xcconfig */,
+				82843EE5032033E41B3A8709 /* Pods-Hakadorikun.release.xcconfig */,
+				6B7F7DCC7651678E567D84D8 /* Pods-Hakadorikun.sample.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		68F77E952614C07300A247D2 = {
 			isa = PBXGroup;
 			children = (
 				68F77EA02614C07300A247D2 /* Hakadorikun */,
 				68F77E9F2614C07300A247D2 /* Products */,
+				600ADFB5324F0D03ED6C94D4 /* Pods */,
+				1673A7D3664F2FBF0A7313CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,15 +108,23 @@
 		68F77EA02614C07300A247D2 /* Hakadorikun */ = {
 			isa = PBXGroup;
 			children = (
-				68F77EBA2614C65400A247D2 /* hakadori1.png */,
-				68F77ED3261563D100A247D2 /* ellipse1.png */,
-				68F77EA12614C07300A247D2 /* AppDelegate.swift */,
-				68F77EA32614C07300A247D2 /* SceneDelegate.swift */,
-				68F77EA52614C07300A247D2 /* ViewController.swift */,
-				68F77EB72614C3A500A247D2 /* HomeViewController.swift */,
 				68F77EA72614C07300A247D2 /* Main.storyboard */,
+				6873A4DA2666D3AE001266BA /* Userdata.swift */,
+				68F77EB72614C3A500A247D2 /* HomeViewController.swift */,
+				6873A4D62666AC10001266BA /* EventEditTableViewController.swift */,
+				6873A4BD26623FA0001266BA /* EventViewController.swift */,
+				680C34F5266B6E81002B6720 /* LocalViewController.swift */,
 				68F77ECA2614DD1A00A247D2 /* KadaiViewController.swift */,
 				683A12D02615F8D800514EC9 /* KadaiSyoViewController.swift */,
+				6836047D26202EAE00B156B8 /* CalendarViewController.swift */,
+				683604812621739600B156B8 /* DateSyoViewController.swift */,
+				68360485262205C800B156B8 /* SampleDataViewController.swift */,
+				683B9EE026431D2B004FFE6A /* PlaceHolderTextView.swift */,
+				853CBFDE26F0D2C500C724C2 /* Datepicker.swift */,
+				68F77EA12614C07300A247D2 /* AppDelegate.swift */,
+				68F77EA32614C07300A247D2 /* SceneDelegate.swift */,
+				68F77ED3261563D100A247D2 /* ellipse1.png */,
+				68F77EBA2614C65400A247D2 /* hakadori1.png */,
 				68F77EAA2614C07700A247D2 /* Assets.xcassets */,
 				68F77EAC2614C07700A247D2 /* LaunchScreen.storyboard */,
 				68F77EAF2614C07700A247D2 /* Info.plist */,
@@ -89,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68F77EB22614C07700A247D2 /* Build configuration list for PBXNativeTarget "Hakadorikun" */;
 			buildPhases = (
+				54EAEB29FB1DA6094796B97B /* [CP] Check Pods Manifest.lock */,
 				68F77E9A2614C07300A247D2 /* Sources */,
 				68F77E9B2614C07300A247D2 /* Frameworks */,
 				68F77E9C2614C07300A247D2 /* Resources */,
+				428E1B33E7D4EB54B6A75BE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,17 +201,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		428E1B33E7D4EB54B6A75BE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hakadorikun/Pods-Hakadorikun-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hakadorikun/Pods-Hakadorikun-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hakadorikun/Pods-Hakadorikun-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54EAEB29FB1DA6094796B97B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hakadorikun-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68F77E9A2614C07300A247D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F77EA62614C07300A247D2 /* ViewController.swift in Sources */,
+				6873A4D72666AC11001266BA /* EventEditTableViewController.swift in Sources */,
 				68F77ECB2614DD1A00A247D2 /* KadaiViewController.swift in Sources */,
+				68360486262205C800B156B8 /* SampleDataViewController.swift in Sources */,
 				68F77EA22614C07300A247D2 /* AppDelegate.swift in Sources */,
+				6873A4BE26623FB2001266BA /* EventViewController.swift in Sources */,
+				853CBFDF26F0D2C500C724C2 /* Datepicker.swift in Sources */,
 				68F77EA42614C07300A247D2 /* SceneDelegate.swift in Sources */,
 				68F77EB82614C3A500A247D2 /* HomeViewController.swift in Sources */,
+				6836047E26202EAE00B156B8 /* CalendarViewController.swift in Sources */,
+				683604822621739600B156B8 /* DateSyoViewController.swift in Sources */,
+				6873A4DB2666D3AE001266BA /* Userdata.swift in Sources */,
+				683B9EE126431D2B004FFE6A /* PlaceHolderTextView.swift in Sources */,
 				683A12D12615F8D800514EC9 /* KadaiSyoViewController.swift in Sources */,
+				680C34F6266B6E81002B6720 /* LocalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +287,85 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		686AD496261F5138000592C0 /* Sample */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82843EE5032033E41B3A8709 /* Pods-Hakadorikun.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Sample;
+		};
+		686AD497261F5138000592C0 /* Sample */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7F7DCC7651678E567D84D8 /* Pods-Hakadorikun.sample.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B59SU9H6DL;
+				INFOPLIST_FILE = Hakadorikun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-projects.Hakadorikun";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Sample;
+		};
 		68F77EB02614C07700A247D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D8C32CAC19E6042F798D19 /* Pods-Hakadorikun.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -248,6 +427,7 @@
 		};
 		68F77EB12614C07700A247D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82843EE5032033E41B3A8709 /* Pods-Hakadorikun.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -303,6 +483,7 @@
 		};
 		68F77EB32614C07700A247D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D8C32CAC19E6042F798D19 /* Pods-Hakadorikun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +503,7 @@
 		};
 		68F77EB42614C07700A247D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82843EE5032033E41B3A8709 /* Pods-Hakadorikun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +529,7 @@
 			buildConfigurations = (
 				68F77EB02614C07700A247D2 /* Debug */,
 				68F77EB12614C07700A247D2 /* Release */,
+				686AD496261F5138000592C0 /* Sample */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -356,6 +539,7 @@
 			buildConfigurations = (
 				68F77EB32614C07700A247D2 /* Debug */,
 				68F77EB42614C07700A247D2 /* Release */,
+				686AD497261F5138000592C0 /* Sample */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
