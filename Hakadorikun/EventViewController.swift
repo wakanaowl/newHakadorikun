@@ -12,8 +12,6 @@ import RealmSwift
 
 class EventViewController: UIViewController, UITextViewDelegate {
     
-    
-    
     let realm = try! Realm()
     
 
@@ -43,8 +41,8 @@ class EventViewController: UIViewController, UITextViewDelegate {
         // Do any additional setup after loading the view.
         Memoview.delegate =  self as UITextViewDelegate
         
-        let data = realm.objects(EventObj.self)
-        EventTitle.text = data.last?.title
+//        let data = realm.objects(EventObj.self)
+//        EventTitle.text = data.last?.title
         
     }
     
@@ -53,7 +51,6 @@ class EventViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
-        
         
         let timeformatter = DateFormatter()
 
@@ -81,6 +78,7 @@ class EventViewController: UIViewController, UITextViewDelegate {
         if Stime == nil || Etime == nil{
             
         } else {
+            
             
             if dateformatter.string(from: Stime!) == dateformatter.string(from: Etime!){
                 

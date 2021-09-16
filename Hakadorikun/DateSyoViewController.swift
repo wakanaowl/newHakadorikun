@@ -66,6 +66,17 @@ class DateSyoViewController: UIViewController, UITableViewDelegate,UITableViewDa
         let labelPlace = cell.viewWithTag(2) as! UILabel
         labelPlace.text = object.place
         
+        let timeformatter = DateFormatter()
+
+        timeformatter.locale = Locale(identifier: "ja_JP")
+        timeformatter.dateFormat = "H:mm"
+        
+        let labelStime = cell.viewWithTag(3) as! UILabel
+        labelStime.text = timeformatter.string(from: object.start_time! )
+        
+        let labelEtime = cell.viewWithTag(4) as! UILabel
+        labelEtime.text = timeformatter.string(from: object.end_time! )
+        
         return cell
     }
     
@@ -73,6 +84,25 @@ class DateSyoViewController: UIViewController, UITableViewDelegate,UITableViewDa
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }
+    
+    //cellをタップした時の処理
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
+        
+        let realm = try! Realm()
+        let data = realm.objects(EventObj.self).filter("%@ <= start_time && start_time < %@",SelectDate as Any,ModifiedDate)
+    
+
+//        //遷移先のViewControllerを設定
+//        let EventViewController = self.storyboard?.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+        
+        
+        print(data[indexPath.row].title)
+        
+        
+    }
+    
 
     /*
     // MARK: - Navigation
