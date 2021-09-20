@@ -56,7 +56,6 @@ class KadaiSyoViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var Subject: UILabel!
     @IBOutlet weak var Deadline: UILabel!
     @IBOutlet weak var Memoview: UITextView!
-    @IBOutlet weak var URLmemo: UITextView!
     @IBOutlet weak var MojiCounter: UILabel!
     
     

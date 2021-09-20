@@ -37,6 +37,8 @@
     CGFloat h = self.bounds.size.width;
     CGContextSetFillColorWithColor(c, self.color.CGColor);
     CGContextFillEllipseInRect(c, CGRectMake(0, 0, w, h));
+    UIView *colorRect = [[UICircleView alloc] initWithFrameColor:rect color:color];
+    colorRect.backgroundColor = [UIColor clearColor];
 }
 
 
