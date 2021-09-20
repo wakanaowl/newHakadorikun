@@ -32,12 +32,19 @@ class DateSyoViewController: UIViewController, UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
-        
-        let realm = try! Realm()
-        let data = realm.objects(EventObj.self).filter("%@ <= start_time && start_time < %@",SelectDate as Any,ModifiedDate)
-        
-        return data.count
+        if section == 0{
+            
+            let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
+            
+            let realm = try! Realm()
+            let data = realm.objects(EventObj.self).filter("%@ <= start_time && start_time < %@",SelectDate as Any,ModifiedDate)
+            
+            return data.count
+            
+        }
+        else {
+            return 1
+        }
         
     }
     
@@ -53,31 +60,42 @@ class DateSyoViewController: UIViewController, UITableViewDelegate,UITableViewDa
         let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
         
         let realm = try! Realm()
-        let data = realm.objects(EventObj.self).filter("%@ <= start_time && start_time < %@",SelectDate as Any,ModifiedDate)
         
-        let object = data[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Eventcell",
-                                                     for: indexPath)
-        
-        let labelTitle = cell.viewWithTag(1) as! UILabel
-        labelTitle.text = object.title
-        
-        let labelPlace = cell.viewWithTag(2) as! UILabel
-        labelPlace.text = object.place
-        
-        let timeformatter = DateFormatter()
+        if indexPath.section == 0{
+            
+            let data = realm.objects(EventObj.self).filter("%@ <= start_time && start_time < %@",SelectDate as Any,ModifiedDate)
+            
+            let object = data[indexPath.row]
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Eventcell",
+                                                         for: indexPath)
+            
+            let labelTitle = cell.viewWithTag(1) as! UILabel
+            labelTitle.text = object.title
+            
+            let labelPlace = cell.viewWithTag(2) as! UILabel
+            labelPlace.text = object.place
+            
+            let timeformatter = DateFormatter()
 
-        timeformatter.locale = Locale(identifier: "ja_JP")
-        timeformatter.dateFormat = "H:mm"
+            timeformatter.locale = Locale(identifier: "ja_JP")
+            timeformatter.dateFormat = "H:mm"
+            
+            let labelStime = cell.viewWithTag(3) as! UILabel
+            labelStime.text = timeformatter.string(from: object.start_time! )
+            
+            let labelEtime = cell.viewWithTag(4) as! UILabel
+            labelEtime.text = timeformatter.string(from: object.end_time! )
+            
+            return cell
+            
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Kadaicell",
+                                                         for: indexPath)
+            return cell
+        }
         
-        let labelStime = cell.viewWithTag(3) as! UILabel
-        labelStime.text = timeformatter.string(from: object.start_time! )
-        
-        let labelEtime = cell.viewWithTag(4) as! UILabel
-        labelEtime.text = timeformatter.string(from: object.end_time! )
-        
-        return cell
     }
     
     func tableView(_ table: UITableView,
@@ -91,7 +109,7 @@ class DateSyoViewController: UIViewController, UITableViewDelegate,UITableViewDa
         let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
         
         let realm = try! Realm()
-        let data = realm.objects(EventObj.self).filter("%@ <= start_time && start_time < %@",SelectDate as Any,ModifiedDate)
+        let data = realm.objects(EventObj.self).filter("%@ < start_time && start_time < %@ || %@ < end_time && end_time < %@ || start_time < %@ && end_time > %@",SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate)
     
 
 //        //遷移先のViewControllerを設定
