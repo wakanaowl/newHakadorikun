@@ -104,21 +104,33 @@ class DateSyoViewController: UIViewController, UITableViewDelegate,UITableViewDa
     }
     
     //cellをタップした時の処理
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
-        
-        let realm = try! Realm()
-        let data = realm.objects(EventObj.self).filter("%@ < start_time && start_time < %@ || %@ < end_time && end_time < %@ || start_time < %@ && end_time > %@",SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate)
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
+//
+//        let realm = try! Realm()
+//        let data = realm.objects(EventObj.self).filter("%@ < start_time && start_time < %@ || %@ < end_time && end_time < %@ || start_time < %@ && end_time > %@",SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate)
+//
+//
+////        //遷移先のViewControllerを設定
+////        let EventViewController = self.storyboard?.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+//
+//
+//        print(data[indexPath.row].title)
+//
+//
+//    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+        let EventViewController = self.storyboard?.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
+            
+        EventViewController.SelectDate = SelectDate
+        EventViewController.rownumber = indexPath.row
+            
+        self.navigationController?.pushViewController(EventViewController, animated: true)
+            
 
-//        //遷移先のViewControllerを設定
-//        let EventViewController = self.storyboard?.instantiateViewController(withIdentifier: "EventViewController") as! EventViewController
-        
-        
-        print(data[indexPath.row].title)
-        
-        
     }
     
 

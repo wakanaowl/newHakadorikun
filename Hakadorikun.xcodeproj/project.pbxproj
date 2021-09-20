@@ -17,6 +17,7 @@
 		6873A4BE26623FB2001266BA /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873A4BD26623FA0001266BA /* EventViewController.swift */; };
 		6873A4D72666AC11001266BA /* EventEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873A4D62666AC10001266BA /* EventEditTableViewController.swift */; };
 		6873A4DB2666D3AE001266BA /* Userdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873A4DA2666D3AE001266BA /* Userdata.swift */; };
+		68A9E6F926F8D43700F471A8 /* DrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A9E6F826F8D43700F471A8 /* DrowView.m */; };
 		68F77EA22614C07300A247D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA12614C07300A247D2 /* AppDelegate.swift */; };
 		68F77EA42614C07300A247D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F77EA32614C07300A247D2 /* SceneDelegate.swift */; };
 		68F77EA92614C07300A247D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F77EA72614C07300A247D2 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 		6873A4BD26623FA0001266BA /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		6873A4D62666AC10001266BA /* EventEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		6873A4DA2666D3AE001266BA /* Userdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdata.swift; sourceTree = "<group>"; };
+		68A9E6F726F8D43700F471A8 /* Hakadorikun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hakadorikun-Bridging-Header.h"; sourceTree = "<group>"; };
+		68A9E6F826F8D43700F471A8 /* DrowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrowView.m; sourceTree = "<group>"; };
 		68F77E9E2614C07300A247D2 /* Hakadorikun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hakadorikun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F77EA12614C07300A247D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F77EA32614C07300A247D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,11 +126,13 @@
 				853CBFDE26F0D2C500C724C2 /* Datepicker.swift */,
 				68F77EA12614C07300A247D2 /* AppDelegate.swift */,
 				68F77EA32614C07300A247D2 /* SceneDelegate.swift */,
+				68A9E6F826F8D43700F471A8 /* DrowView.m */,
 				68F77ED3261563D100A247D2 /* ellipse1.png */,
 				68F77EBA2614C65400A247D2 /* hakadori1.png */,
 				68F77EAA2614C07700A247D2 /* Assets.xcassets */,
 				68F77EAC2614C07700A247D2 /* LaunchScreen.storyboard */,
 				68F77EAF2614C07700A247D2 /* Info.plist */,
+				68A9E6F726F8D43700F471A8 /* Hakadorikun-Bridging-Header.h */,
 			);
 			path = Hakadorikun;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				TargetAttributes = {
 					68F77E9D2614C07300A247D2 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -261,6 +267,7 @@
 				6873A4DB2666D3AE001266BA /* Userdata.swift in Sources */,
 				683B9EE126431D2B004FFE6A /* PlaceHolderTextView.swift in Sources */,
 				683A12D12615F8D800514EC9 /* KadaiSyoViewController.swift in Sources */,
+				68A9E6F926F8D43700F471A8 /* DrowView.m in Sources */,
 				680C34F6266B6E81002B6720 /* LocalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B59SU9H6DL;
 				INFOPLIST_FILE = Hakadorikun/Info.plist;
@@ -358,6 +366,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-projects.Hakadorikun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hakadorikun/Hakadorikun-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -487,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B59SU9H6DL;
 				INFOPLIST_FILE = Hakadorikun/Info.plist;
@@ -496,6 +506,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-projects.Hakadorikun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hakadorikun/Hakadorikun-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -507,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B59SU9H6DL;
 				INFOPLIST_FILE = Hakadorikun/Info.plist;
@@ -516,6 +529,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS-projects.Hakadorikun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hakadorikun/Hakadorikun-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

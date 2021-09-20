@@ -102,12 +102,14 @@ class LocalViewController: UIViewController, UITableViewDelegate, UITableViewDat
             tableView.deselectRow(at: indexPath, animated: true)
             
             self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
 
         }
 
 
     @IBAction func CancelButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
     }
     
 //    func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {

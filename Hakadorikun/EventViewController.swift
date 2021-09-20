@@ -14,7 +14,10 @@ class EventViewController: UIViewController, UITextViewDelegate {
     
     let realm = try! Realm()
     
-
+    var SelectDate:Date? = nil
+    var rownumber:Int? = nil
+        
+    
     @IBOutlet weak var Memoview: UITextView!
     @IBOutlet weak var URLView: UILabel!
     @IBOutlet weak var EventTitle: UILabel!
@@ -111,6 +114,8 @@ class EventViewController: UIViewController, UITextViewDelegate {
     
     }
     
+
+    
     
 
     /*
@@ -123,4 +128,16 @@ class EventViewController: UIViewController, UITextViewDelegate {
     }
     */
 
+    @IBAction func EditButton(_ sender: Any) {
+        
+        let EventEditTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "EventEditTableViewController") as! EventEditTableViewController
+        
+        EventEditTableViewController.SelectDate = SelectDate
+        EventEditTableViewController.rownumber = rownumber
+        
+        self.navigationController?.pushViewController(EventEditTableViewController, animated: true)
+        
+    }
+    
+    
 }

@@ -21,12 +21,16 @@ class object: NSObject {
 
 class EventEditTableViewController: UITableViewController, UITextFieldDelegate  {
     
+    var SelectDate:Date? = nil
+    var rownumber:Int? = nil
+    
     
     @IBOutlet weak var EventTitle: UITextField!
     @IBOutlet weak var localLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var EventTableView:
         UITableView!
+    @IBOutlet weak var CircleView: UICircleView!
     
     @IBOutlet weak var URLLabel: UITextField!
     
@@ -44,48 +48,47 @@ class EventEditTableViewController: UITableViewController, UITextFieldDelegate  
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+            super.viewDidLoad()
+            
         let realm = try! Realm()
-        let data = realm.objects(EventObj.self)
+        let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
+            
+        let data = realm.objects(EventObj.self).filter("%@ < start_time && start_time < %@ || %@ < end_time && end_time < %@ || start_time < %@ && end_time > %@",SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate)
+            
+        let object = data[rownumber!]
+            
         EventTitle.delegate = self
-        EventTitle.text = data.last?.title
-        detailLabel.text = data.last?.address
-        URLLabel.text = data.last?.url
-        MemoLabel.text = data.last?.memo
-        
-        if data.last?.start_time == nil {
+        EventTitle.text = object.title
+        detailLabel.text = object.address
+        URLLabel.text = object.url
+        MemoLabel.text = object.memo
+        CircleView.color = UIColor.orange
+        CircleView.backgroundColor = UIColor.clear
             
+        if object.start_time == nil {
+                
         } else {
-            
-            StartPicker.date = data.last!.start_time!
+                
+            StartPicker.date = object.start_time!
         }
-        
-        if data.last?.end_time == nil {
             
+        if object.end_time == nil {
+                
         } else {
-            
-            EndPicker.date = data.last!.end_time!
+                
+            EndPicker.date = object.end_time!
         }
-        
-        
-        
-        
-        if data.last?.place == nil {
+            
+            
+            
+            
+        if object.place == "" {
             localLabel.text = "場所"
-            
-        }
-        else{
-            localLabel.text = data.last?.place
+                
+        } else {
+            localLabel.text = object.place
             localLabel.textColor = UIColor.black
         }
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -209,29 +212,27 @@ class EventEditTableViewController: UITableViewController, UITextFieldDelegate  
     
     @IBAction func InputButton(_ sender: Any) {
         
+        //編集用(上書き)
         if StartPicker.date <= EndPicker.date {
             
-            let instancedEventObj:EventObj = EventObj()
+            let realm = try! Realm()
+            let ModifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: SelectDate!)!
             
-            let realmInstance = try! Realm()
+            let data = realm.objects(EventObj.self).filter("%@ < start_time && start_time < %@ || %@ < end_time && end_time < %@ || start_time < %@ && end_time > %@",SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate,SelectDate as Any,ModifiedDate)
             
-            try! realmInstance.write{
-                instancedEventObj.title = self.EventTitle.text!
-                instancedEventObj.place = self.localLabel.text!
-                instancedEventObj.address = self.detailLabel.text!
-                instancedEventObj.url = self.URLLabel.text!
-                instancedEventObj.memo = self.MemoLabel.text!
+            
+            try! realm.write{
+                data[rownumber!].title = self.EventTitle.text!
+                data[rownumber!].place = self.localLabel.text!
+                data[rownumber!].address = self.detailLabel.text!
+                data[rownumber!].url = self.URLLabel.text!
+                data[rownumber!].memo = self.MemoLabel.text!
                 
                 //↓日時をRealmに送る
-                instancedEventObj.start_time = StartPicker.date
-                instancedEventObj.end_time = EndPicker.date
+                data[rownumber!].start_time = StartPicker.date
+                data[rownumber!].end_time = EndPicker.date
                 
-                instancedEventObj.all_day = self.Jswitch
-                
-                
-                realmInstance.add(instancedEventObj)
-                
-                print(StartPicker.date)
+                data[rownumber!].all_day = self.Jswitch
                 
             }
             
@@ -240,21 +241,40 @@ class EventEditTableViewController: UITableViewController, UITextFieldDelegate  
             sample.Localdata = ""
             sample.Localdetail = ""
             
-            print(instancedEventObj.place)
+            print(data[rownumber!].place)
             
             self.navigationController?.popViewController(animated: true)
-    //        EventTitle.resignFirstResponder()
-    //        let newEvent = EventObj()
-    //        newEvent.title = EventTitle.text!
-    //
-    //            do{
-    //                let realm = try Realm()
-    //                try realm.write({()->Void in realm.add(newEvent); print("Event Saved")})
-    //
-    //            }catch{
-    //                print("Save is Faild")
-    //            }
+
+      
         }
+        
+        //          追加用
+        //
+        //          if StartPicker.date <= EndPicker.date {
+        //
+        //            let instancedEventObj:EventObj = EventObj()
+        //
+        //            let realmInstance = try! Realm()
+        //
+        //            try! realmInstance.write{
+        //                instancedEventObj.title = self.EventTitle.text!
+        //                instancedEventObj.place = self.localLabel.text!
+        //                instancedEventObj.address = self.detailLabel.text!
+        //                instancedEventObj.url = self.URLLabel.text!
+        //                instancedEventObj.memo = self.MemoLabel.text!
+        //
+        //                //↓日時をRealmに送る
+        //                instancedEventObj.start_time = StartPicker.date
+        //                instancedEventObj.end_time = EndPicker.date
+        //
+        //                instancedEventObj.all_day = self.Jswitch
+        //
+        //
+        //                realmInstance.add(instancedEventObj)
+        //
+        //                print(StartPicker.date)
+        //
+        //            }
       
 
     }
@@ -268,7 +288,7 @@ class EventEditTableViewController: UITableViewController, UITextFieldDelegate  
     
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //
-//        if indexPath.section == 1 && indexPath.row == 2{
+//        if indexPath.section == 0 && indexPath.row == 1{
 //            let storyboard: UIStoryboard = self.storyboard!
 //            let vc = storyboard.instantiateViewController(withIdentifier: "LocalViewController")
 //

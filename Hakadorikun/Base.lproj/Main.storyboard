@@ -271,9 +271,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="8JV-BK-7JU" kind="push" id="Doc-bl-eHG"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Kadaicell" rowHeight="66" id="JW9-7Q-1nd">
                                         <rect key="frame" x="0.0" y="121.33333206176758" width="390" height="66"/>
@@ -313,11 +310,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="QNo-Eh-6uf">
-                        <barButtonItem key="rightBarButtonItem" title="追加" id="cns-8Z-Xgf">
-                            <connections>
-                                <segue destination="4tg-Za-T33" kind="show" id="l2n-Nh-kZj"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="追加" id="cns-8Z-Xgf"/>
                     </navigationItem>
                     <connections>
                         <outlet property="eventTable" destination="h3K-hV-ZJw" id="01C-oo-yDC"/>
@@ -567,7 +560,7 @@
                     <navigationItem key="navigationItem" id="U0P-cR-N8f">
                         <barButtonItem key="rightBarButtonItem" title="編集" id="ZGg-eV-yth">
                             <connections>
-                                <segue destination="99z-2k-tPB" kind="show" id="em9-zF-XyU"/>
+                                <action selector="EditButton:" destination="ep5-iZ-eqy" id="OVu-I6-eCe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -581,6 +574,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nd3-VR-h5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ep5-iZ-eqy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="490.76923076923077" y="-31.279620853080566"/>
         </scene>
@@ -765,7 +759,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Rn-rL-V8Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441.5384615384614" y="-25.592417061611375"/>
+            <point key="canvasLocation" x="1749" y="-31"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="MjE-R4-P7l">
@@ -936,7 +930,7 @@
                     <navigationItem key="navigationItem" id="tfZ-jB-bog">
                         <barButtonItem key="rightBarButtonItem" title="編集" id="PgE-8Q-c6L">
                             <connections>
-                                <segue destination="4tg-Za-T33" kind="show" id="0gC-2G-Kc1"/>
+                                <action selector="EditButton:" destination="8JV-BK-7JU" id="8bh-gK-JAi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -958,7 +952,7 @@
         <!--イベントを編集-->
         <scene sceneID="zQA-K1-aaa">
             <objects>
-                <tableViewController id="4tg-Za-T33" customClass="EventEditTableViewController" customModule="Hakadorikun" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventEditTableViewController" id="4tg-Za-T33" customClass="EventEditTableViewController" customModule="Hakadorikun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="5" id="ZaF-59-VSA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1012,7 +1006,7 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="wCV-23-PTY" kind="show" id="QI8-BW-Uwq"/>
+                                            <segue destination="wCV-23-PTY" kind="show" id="ppi-7D-HEd"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1130,6 +1124,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0J-Cx-Ga9" customClass="UICircleView">
+                                                    <rect key="frame" x="338" y="14" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="JnT-TC-4Nd" secondAttribute="bottom" id="0Gb-ND-Sp1"/>
@@ -1236,6 +1235,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="CircleView" destination="b0J-Cx-Ga9" id="1Bk-XS-YLy"/>
                         <outlet property="EndPicker" destination="oMn-aj-kbl" id="myJ-WS-MIF"/>
                         <outlet property="EventTableView" destination="ZaF-59-VSA" id="geI-H1-4wh"/>
                         <outlet property="EventTitle" destination="dTZ-jp-WT0" id="rQ2-Vx-JJr"/>
@@ -1248,18 +1248,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Tg-1E-bfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="807"/>
+            <point key="canvasLocation" x="1421.5384615384614" y="806.87203791469187"/>
         </scene>
         <!--場所-->
         <scene sceneID="Tq4-2f-yta">
             <objects>
                 <viewController storyboardIdentifier="LocalViewController" id="wCV-23-PTY" customClass="LocalViewController" customModule="Hakadorikun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wIj-qQ-77g">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="場所を入力" translatesAutoresizingMaskIntoConstraints="NO" id="qx6-lq-0rY">
-                                <rect key="frame" x="0.0" y="88" width="390" height="57"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Odw-vU-rgE"/>
                                 </constraints>
@@ -1269,7 +1269,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VRl-4p-q0w">
-                                <rect key="frame" x="0.0" y="145" width="390" height="699"/>
+                                <rect key="frame" x="0.0" y="57" width="390" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Localcell" textLabel="YHB-d7-DlQ" detailTextLabel="Cf1-r4-gmc" style="IBUITableViewCellStyleSubtitle" id="bEg-NJ-ze4">
@@ -1329,16 +1329,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yix-Jp-J00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425" y="807"/>
+            <point key="canvasLocation" x="2386" y="807"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="l2n-Nh-kZj"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="ellipse1.png" width="150" height="150"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
