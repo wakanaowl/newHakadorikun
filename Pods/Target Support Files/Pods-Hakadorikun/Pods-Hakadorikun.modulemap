@@ -1,0 +1,6 @@
+framework module Pods_Hakadorikun {
+  umbrella header "Pods-Hakadorikun-umbrella.h"
+
+  export *
+  module * { export * }
+}
