@@ -7,13 +7,15 @@
 
 import UIKit
 import RealmSwift
+import Floaty
 
-class KadaiViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
+class KadaiViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,FloatyDelegate{
     
 
     @IBOutlet weak var KadaiTable: UITableView!
     
- //   let realm = try! Realm()
+    //   let realm = try! Realm()
 
     
     
@@ -23,11 +25,19 @@ class KadaiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         KadaiTable.delegate = self
         KadaiTable.dataSource = self
         
+        
+        
+        
+    
+        
+        //button.layer.cornerRadius = 32
 //        let kadaiData = realm.objects(Kadai.self)
 //        print("全てのデータ\(kadaiData)")
         
         // Do any additional setup after loading the view.
     }
+    
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -53,6 +63,7 @@ class KadaiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+
 
 
 

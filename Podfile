@@ -13,5 +13,6 @@ pod 'CalculateCalendarLogic'
 pod 'RealmSwift'
 pod 'Alamofire'
 pod 'TTTAttributedLabel'
+pod 'Floaty'
 
 end

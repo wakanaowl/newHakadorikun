@@ -117,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n41-PS-HW0">
-                                <rect key="frame" x="262" y="212" width="107" height="94"/>
+                                <rect key="frame" x="260" y="212" width="109" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <state key="normal" title="データ">
@@ -134,6 +134,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v2F-8R-c98" customClass="FloatyFactory" customModule="Hakadorikun" customModuleProvider="target">
+                                <rect key="frame" x="129" y="682" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1203" y="58"/>
+            <point key="canvasLocation" x="-1203.0769230769231" y="57.582938388625593"/>
         </scene>
         <!--カレンダー-->
         <scene sceneID="6Jc-LW-J8y">
@@ -305,9 +310,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xso-2B-VEc">
+                                <rect key="frame" x="306" y="708" width="64" height="64"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="cpy-GD-yLR"/>
+                                    <constraint firstAttribute="width" constant="64" id="vaY-7y-a6Z"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3NX-XF-BSr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3NX-XF-BSr" firstAttribute="trailing" secondItem="Xso-2B-VEc" secondAttribute="trailing" constant="20" id="KqR-gE-mid"/>
+                            <constraint firstItem="Xso-2B-VEc" firstAttribute="top" secondItem="3NX-XF-BSr" secondAttribute="top" constant="620" id="j9b-XH-DHn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QNo-Eh-6uf">
                         <barButtonItem key="rightBarButtonItem" title="追加" id="cns-8Z-Xgf"/>
@@ -388,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sny-Kj-CWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="58"/>
+            <point key="canvasLocation" x="-426.15384615384613" y="57.582938388625593"/>
         </scene>
         <!--Kadai Syo View Controller-->
         <scene sceneID="OOl-RM-uVl">

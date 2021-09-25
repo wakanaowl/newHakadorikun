@@ -1,18 +1,20 @@
 PODS:
-  - Alamofire (5.4.3)
-  - CalculateCalendarLogic (0.4.0)
+  - Alamofire (5.4.4)
+  - CalculateCalendarLogic (0.5.0)
+  - Floaty (4.2.0)
   - FSCalendar (2.8.2)
-  - Realm (10.7.6):
-    - Realm/Headers (= 10.7.6)
-  - Realm/Headers (10.7.6)
-  - RealmSwift (10.7.6):
-    - Realm (= 10.7.6)
+  - Realm (10.15.1):
+    - Realm/Headers (= 10.15.1)
+  - Realm/Headers (10.15.1)
+  - RealmSwift (10.15.1):
+    - Realm (= 10.15.1)
   - SwiftyJSON (5.0.1)
   - TTTAttributedLabel (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - CalculateCalendarLogic
+  - Floaty
   - FSCalendar
   - RealmSwift
   - SwiftyJSON
@@ -22,6 +24,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - CalculateCalendarLogic
+    - Floaty
     - FSCalendar
     - Realm
     - RealmSwift
@@ -29,14 +32,15 @@ SPEC REPOS:
     - TTTAttributedLabel
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  CalculateCalendarLogic: 84d3aff9456340ff07f7b77242a57b5d2f0ed631
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  CalculateCalendarLogic: d14189787cd47766e64281b2686608afea07ae4d
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
-  Realm: ed860452717c8db8f4bf832b6807f7f2ce708839
-  RealmSwift: e31c4ddbcc42ac879313d656b86f9ca539f6f4f4
+  Realm: fbcbde2620d51623cc5b18e28f5b165c39abef52
+  RealmSwift: e4bea8e42efad3d543aea23b56504069c6faaea2
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 9dbb718a5eab72c1ec9297331d886eb577b8905d
+PODFILE CHECKSUM: aabc4325a68bf5d83c3b0602c06f3c6fb8fb82a1
 
 COCOAPODS: 1.10.1
