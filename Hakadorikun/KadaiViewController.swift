@@ -25,9 +25,25 @@ class KadaiViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         KadaiTable.delegate = self
         KadaiTable.dataSource = self
         
+        let fab = Floaty()
+                
+        fab.buttonColor = .orange
+        fab.plusColor = .white
         
+        fab.addItem(title: "課題")
+        fab.addItem(title: "イベント"){(item)in
+//            let EventEditTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "EventEditTableViewController") as! EventEditTableViewController
+            
+//            self.navigationController?.pushViewController(EventEditTableViewController, animated: true)
+        }
         
+//        floaty.addItem("送信", icon: UIImage(named: "send")) { (item) in
+//                    // 送信ボタンが押された時の処理
+//                }
         
+        view.addSubview(fab)
+        
+    
     
         
         //button.layer.cornerRadius = 32

@@ -23,5 +23,12 @@ class  EventObj: Object {
     @objc dynamic var start_time: Date? = nil
     @objc dynamic var end_time: Date? = nil
     @objc dynamic var all_day = 0
+    @objc dynamic var ID = ""
+    
+    //primary Key
+    override static func primaryKey() -> String? {
+        return "ID"
+    }
     
 }
+

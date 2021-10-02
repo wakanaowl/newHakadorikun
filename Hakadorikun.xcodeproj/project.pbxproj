@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0826CF3EF51A6F141B16C423 /* Pods_Hakadorikun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B1CC9D3703F29CD401BE3A /* Pods_Hakadorikun.framework */; };
 		680C34F6266B6E81002B6720 /* LocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680C34F5266B6E81002B6720 /* LocalViewController.swift */; };
-		683425D826FE6B0D0031B522 /* AddButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683425D726FE6B0D0031B522 /* AddButtonViewController.swift */; };
-		6834260026FFAB6B0031B522 /* FloatyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683425FF26FFAB6A0031B522 /* FloatyFactory.swift */; };
 		6836047E26202EAE00B156B8 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6836047D26202EAE00B156B8 /* CalendarViewController.swift */; };
 		683604822621739600B156B8 /* DateSyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683604812621739600B156B8 /* DateSyoViewController.swift */; };
 		68360486262205C800B156B8 /* SampleDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68360485262205C800B156B8 /* SampleDataViewController.swift */; };
@@ -36,8 +34,6 @@
 /* Begin PBXFileReference section */
 		47D8C32CAC19E6042F798D19 /* Pods-Hakadorikun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hakadorikun.debug.xcconfig"; path = "Target Support Files/Pods-Hakadorikun/Pods-Hakadorikun.debug.xcconfig"; sourceTree = "<group>"; };
 		680C34F5266B6E81002B6720 /* LocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalViewController.swift; sourceTree = "<group>"; };
-		683425D726FE6B0D0031B522 /* AddButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonViewController.swift; sourceTree = "<group>"; };
-		683425FF26FFAB6A0031B522 /* FloatyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyFactory.swift; sourceTree = "<group>"; };
 		6836047D26202EAE00B156B8 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		683604812621739600B156B8 /* DateSyoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSyoViewController.swift; sourceTree = "<group>"; };
 		68360485262205C800B156B8 /* SampleDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +122,6 @@
 				680C34F5266B6E81002B6720 /* LocalViewController.swift */,
 				68A9E6FC26F9044000F471A8 /* ColorTableViewController.swift */,
 				68F77ECA2614DD1A00A247D2 /* KadaiViewController.swift */,
-				683425FF26FFAB6A0031B522 /* FloatyFactory.swift */,
 				683A12D02615F8D800514EC9 /* KadaiSyoViewController.swift */,
 				6836047D26202EAE00B156B8 /* CalendarViewController.swift */,
 				68360485262205C800B156B8 /* SampleDataViewController.swift */,
@@ -141,7 +136,6 @@
 				68F77EAA2614C07700A247D2 /* Assets.xcassets */,
 				68F77EAC2614C07700A247D2 /* LaunchScreen.storyboard */,
 				68F77EAF2614C07700A247D2 /* Info.plist */,
-				683425D726FE6B0D0031B522 /* AddButtonViewController.swift */,
 			);
 			path = Hakadorikun;
 			sourceTree = "<group>";
@@ -264,8 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6873A4D72666AC11001266BA /* EventEditTableViewController.swift in Sources */,
-				6834260026FFAB6B0031B522 /* FloatyFactory.swift in Sources */,
-				683425D826FE6B0D0031B522 /* AddButtonViewController.swift in Sources */,
 				68F77ECB2614DD1A00A247D2 /* KadaiViewController.swift in Sources */,
 				68360486262205C800B156B8 /* SampleDataViewController.swift in Sources */,
 				68F77EA22614C07300A247D2 /* AppDelegate.swift in Sources */,

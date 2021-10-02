@@ -310,26 +310,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xso-2B-VEc">
-                                <rect key="frame" x="306" y="708" width="64" height="64"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="cpy-GD-yLR"/>
-                                    <constraint firstAttribute="width" constant="64" id="vaY-7y-a6Z"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3NX-XF-BSr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="3NX-XF-BSr" firstAttribute="trailing" secondItem="Xso-2B-VEc" secondAttribute="trailing" constant="20" id="KqR-gE-mid"/>
-                            <constraint firstItem="Xso-2B-VEc" firstAttribute="top" secondItem="3NX-XF-BSr" secondAttribute="top" constant="620" id="j9b-XH-DHn"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QNo-Eh-6uf">
-                        <barButtonItem key="rightBarButtonItem" title="追加" id="cns-8Z-Xgf"/>
+                        <barButtonItem key="rightBarButtonItem" title="追加" id="cns-8Z-Xgf">
+                            <connections>
+                                <segue destination="4tg-Za-T33" kind="show" id="dqh-do-L57"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="eventTable" destination="h3K-hV-ZJw" id="01C-oo-yDC"/>
@@ -1049,7 +1039,7 @@
                                                     <rect key="frame" x="324" y="9" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.27843137254901962" green="0.792156862745098" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
-                                                        <action selector="Switch:" destination="4tg-Za-T33" eventType="valueChanged" id="Beb-dt-Ydi"/>
+                                                        <action selector="SwitchOn:" destination="4tg-Za-T33" eventType="valueChanged" id="wEB-as-ebb"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -1081,6 +1071,9 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <locale key="locale" localeIdentifier="ja_JP"/>
+                                                    <connections>
+                                                        <action selector="TimeChenge:" destination="4tg-Za-T33" eventType="valueChanged" id="kmW-7X-LGS"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -1263,6 +1256,7 @@
                         <outlet property="EventTitle" destination="dTZ-jp-WT0" id="rQ2-Vx-JJr"/>
                         <outlet property="MemoLabel" destination="J1u-wm-ZQc" id="GHd-Ju-K0Q"/>
                         <outlet property="StartPicker" destination="eXQ-6M-k3n" id="oac-lh-dr0"/>
+                        <outlet property="Switch" destination="IsW-44-QJq" id="3P5-Ty-Glx"/>
                         <outlet property="URLLabel" destination="zPM-WC-HS7" id="2FL-l1-Jrs"/>
                         <outlet property="detailLabel" destination="0ot-oD-xNV" id="ZUd-wO-iHb"/>
                         <outlet property="localLabel" destination="ckx-Bu-cKd" id="JlW-cp-38t"/>
@@ -1277,7 +1271,7 @@
             <objects>
                 <tableViewController id="AK2-XC-IoR" customClass="ColorTableViewController" customModule="Hakadorikun" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nbi-FO-8l0">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -1472,11 +1466,11 @@
             <objects>
                 <viewController storyboardIdentifier="LocalViewController" id="wCV-23-PTY" customClass="LocalViewController" customModule="Hakadorikun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wIj-qQ-77g">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="場所を入力" translatesAutoresizingMaskIntoConstraints="NO" id="qx6-lq-0rY">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="57"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Odw-vU-rgE"/>
                                 </constraints>
@@ -1486,7 +1480,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VRl-4p-q0w">
-                                <rect key="frame" x="0.0" y="57" width="390" height="733"/>
+                                <rect key="frame" x="0.0" y="145" width="390" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Localcell" textLabel="YHB-d7-DlQ" detailTextLabel="Cf1-r4-gmc" style="IBUITableViewCellStyleSubtitle" id="bEg-NJ-ze4">

@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
         
-
+//          Realmのデータ削除
 //            if let fileURL = Realm.Configuration.defaultConfiguration.fileURL {
 //                try! FileManager.default.removeItem(at: fileURL)
 //           }
