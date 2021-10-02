@@ -45,6 +45,7 @@ class EventViewController: UIViewController, UITextViewDelegate {
         // Do any additional setup after loading the view.
         Memoview.delegate =  self as UITextViewDelegate
         
+        
         let timeformatter = DateFormatter()
         
         timeformatter.locale = Locale(identifier: "ja_JP")

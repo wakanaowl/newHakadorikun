@@ -14,6 +14,7 @@
             var Localdata:String? = nil
             var Localdetail:String? = nil
             
+            
         }
         
         class EventEditTableViewController: UITableViewController, UITextFieldDelegate  {

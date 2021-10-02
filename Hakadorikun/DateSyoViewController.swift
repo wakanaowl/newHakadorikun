@@ -12,6 +12,7 @@ class DateSyoViewController: UIViewController, UITableViewDelegate,UITableViewDa
     
     var SelectDate:Date? = nil
     
+    
 
     @IBOutlet weak var eventTable: UITableView!
     
